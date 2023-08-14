@@ -3,17 +3,20 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.n2ex.ecmp</groupId>
-    <artifactId>ecmp-core</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
-
-    <name>n2ex-ecmp-core</name>
-
+    <artifactId>ecmp-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version> 
+    <name>ecmp-parent</name>
+<packaging>pom</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+    <modules>
+        <module>org.n2ex.ecmp-bps</module>
+        <module>org.n2ex.ecmp-core</module>
+        <module>org.n2ex.ecmp-utils</module>
+    </modules>
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
@@ -88,150 +91,7 @@
             </plugin>
         </plugins>
     </build>
-    <dependencies>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <scope>test</scope>
-            <version> 5.10.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jbundle.util</groupId>
-            <artifactId>org.jbundle.util.jbackup</artifactId>
-            <version>2.0.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.bouncycastle</groupId>
-            <artifactId>bcprov-jdk15on</artifactId>
-            <version> 1.64</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-codec</groupId>
-            <artifactId>commons-codec</artifactId>
-            <version>1.9</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.5.6 </version>
-        </dependency>
-        <dependency>
-            <groupId>org.bouncycastle</groupId>
-            <artifactId>bcpkix-jdk15on</artifactId>
-            <version>1.64</version>
-        </dependency>
-        <dependency>
-            <groupId>net.sf.webtestfixtures</groupId>
-            <artifactId>webtestfixtures</artifactId>
-            <version>2.0.1.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.shoal</groupId>
-            <artifactId>shoal-gms-api</artifactId>
-            <version>1.5.8</version>
-        </dependency>
-        <dependency>
-            <groupId>org.ow2.util</groupId>
-            <artifactId>util-i18n</artifactId>
-            <version>1.0.22</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.grizzly</groupId>
-            <artifactId>grizzly-lzma</artifactId>
-            <version>1.9.19-beta5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.codehaus.sonar</groupId>
-            <artifactId>sonar-squid</artifactId>
-            <version>2.9</version>
-        </dependency>
-        <dependency>
-            <groupId>org.graniteds</groupId>
-            <artifactId>granite-openjpa</artifactId>
-            <version>2.2.0.SP1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>tomcat-util</artifactId>
-            <version>7.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.camel</groupId>
-            <artifactId>camel-http</artifactId>
-            <version>2.4.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.struts.xwork</groupId>
-            <artifactId>xwork-core</artifactId>
-            <version>2.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jruby</groupId>
-            <artifactId>jruby-complete</artifactId>
-            <version>1.1RC1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jruby</groupId>
-            <artifactId>jruby</artifactId>
-            <version>1.6.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mortbay.jetty</groupId>
-            <artifactId>jetty</artifactId>
-            <version>6.1.16</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.derby</groupId>
-            <artifactId>derby</artifactId>
-            <version>10.1.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>3.1.1.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.code.facebookapi</groupId>
-            <artifactId>facebook-java-api</artifactId>
-            <version>3.0.4</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>12.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava-gwt</artifactId>
-            <version>12.0</version>
-        </dependency>
-        <dependency>
-            <groupId>biz.littlej.jreqs</groupId>
-            <artifactId>jreqs-guava</artifactId>
-            <version>0.1.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.sonatype.sisu</groupId>
-            <artifactId>sisu-ehcache</artifactId>
-            <version>1.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.sonatype.sisu</groupId>
-            <artifactId>sisu-xmlrpc-client</artifactId>
-            <version>1.2.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.googlecode</groupId>
-            <artifactId>kiama_2.8.1</artifactId>
-            <version>1.0.2</version>
-        </dependency>
-        <dependency>
-            <groupId>com.googlecode</groupId>
-            <artifactId>jyield</artifactId>
-            <version>0.0.6</version>
-        </dependency>
-    </dependencies>
+    <dependencies /> 
 
 
 </project>

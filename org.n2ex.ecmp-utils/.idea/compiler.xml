@@ -6,13 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ecmp-core (3)" />
-        <module name="ecmp-core (2)" />
-        <module name="ecmp-core (1)" />
+        <module name="ecmp-core" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ecmp-core" target="1.8" />
       <module name="simple-project" target="1.5" />
     </bytecodeTargetLevel>
   </component>
